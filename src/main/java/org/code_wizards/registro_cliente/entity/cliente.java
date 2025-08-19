@@ -12,7 +12,7 @@ import lombok.EqualsAndHashCode;
 import javax.annotation.processing.Generated;
 
 
-@Entity(name = "clientes")
+@Entity(name = "Clientes")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
