@@ -1,13 +1,10 @@
 package org.code_wizards.registro_cliente.service;
-import org.code_wizards.registro_cliente.entity.cliente;
+import org.code_wizards.registro_cliente.entity.Cliente;
 import java.util.List;
 
 public interface IClienteService {
-    public List<cliente> listarClientes();
-
-    public cliente buscarClienteporId(Integer codigo);
-
-    public void guardarCliente(cliente cliente);//agregar y actuc
-
-    public void eliminarCliente(cliente cliente);
+    public List<Cliente> listarClientes();
+    public Cliente buscarClienteporId(Integer codigo);
+    public void guardarCliente(Cliente cliente);
+    public void eliminarCliente(Cliente cliente);
 }

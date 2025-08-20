@@ -11,7 +11,7 @@
     <groupId>org.code_wizards</groupId>
     <artifactId>registro-cliente</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>registro-cliente</name>
+    <name>RegistroClienteSpringBoot</name>
     <description>proyecto 1 para taller - Basicos de SpringBoot</description>
     <url/>
     <licenses>
@@ -81,5 +81,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

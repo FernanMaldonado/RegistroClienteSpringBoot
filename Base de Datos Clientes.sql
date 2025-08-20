@@ -1,6 +1,6 @@
-drop database if exists clientes_2024021_db;
-create database clientes_2024021_db;
-use clientes_2024021_db;
+drop database if exists Clientes2024021;
+create database Clientes2024021;
+use Clientes2024021;
  
 create table Clientes(
 	codigoCliente integer auto_increment,

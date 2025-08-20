@@ -1,30 +1,42 @@
 package org.code_wizards.registro_cliente.service;
-import org.code_wizards.registro_cliente.entity.cliente;
+
+import org.code_wizards.registro_cliente.entity.Cliente;
 import org.code_wizards.registro_cliente.repository.ClienteRepository;
+
+//Inyectar dependencia
 import org.springframework.beans.factory.annotation.Autowire;
+//componente de SpringBoot parar crear aplicaciones
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
-public class ClienteService implements IClienteService {
+public class ClienteService implements IClienteService{
+    //Inyecion de Dependencias
+    @Autowired
+    private ClienteRepository clienteRepository;
 
     @Override
-    public List<cliente> listarClientes() {
+    public List<Cliente> listarClientes() {
+        List<Cliente> clientes = clienteRepository.findAll();
         return List.of();
     }
 
     @Override
-    public cliente buscarClienteporId(Integer codigo) {
+    public Cliente buscarClienteporId(Integer codigo) {
+        Cliente cliente = clienteRepository.findById(codigo).orElse( null);
         return null;
     }
 
     @Override
-    public void guardarCliente(cliente cliente) {
+    public void guardarCliente(Cliente cliente) {
+        clienteRepository.save(cliente);
 
     }
 
     @Override
-    public void eliminarCliente(cliente cliente) {
-
+    public void eliminarCliente(Cliente cliente) {
+        clienteRepository.delete(cliente);
     }
 }
